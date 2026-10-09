@@ -565,6 +565,7 @@ class RaySinkTest(unittest.TestCase):
                 self.table,
                 overwrite=False,
                 static_partition={'dt': '2024-01-01'},
+                options=None,
             )
             dataset.write_datasink.assert_called_once_with(
                 datasink,
@@ -591,6 +592,7 @@ class RaySinkTest(unittest.TestCase):
                 self.table,
                 overwrite=False,
                 static_partition={'dt': '2024-01-02'},
+                options=None,
             )
 
     def test_on_write_failed(self):
